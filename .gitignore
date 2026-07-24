@@ -1,4 +1,17 @@
-﻿node_modules/
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local WhatsApp data
+messages.json
+whatsapp_session/
+*.session
+*.session-journal
+
+# Environment and editors
 .env
 .DS_Store
 .vscode/
+.idea/
