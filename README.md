@@ -1,80 +1,39 @@
-# WhatsApp Python Bot
+# WhatsApp Web Monitor - Python Prototype
 
-A Python automation script for WhatsApp Web using Selenium. The bot opens WhatsApp Web, saves the browser session locally, monitors chats, detects new messages, and stores structured message data in JSON format.
+A small learning prototype that uses Selenium to observe WhatsApp Web and save selected incoming message data locally as JSON.
 
-## Features
+## What It Does
 
-- Automates WhatsApp Web using Selenium
-- Saves browser session after QR login
-- Monitors private and group chats
-- Detects and logs new incoming messages
-- Stores chat name, message text, and timestamp
-- Uses JSON as a simple local data store
-- Useful for learning browser automation and message monitoring workflows
+- Opens WhatsApp Web in Chrome
+- Reuses a local browser profile after QR authentication
+- Watches the currently available chat interface for incoming messages
+- Extracts basic message information exposed by the page
+- Stores structured records in a local JSON file
 
 ## Tech Stack
 
-- **Language:** Python
-- **Automation:** Selenium
-- **Browser:** Chrome / ChromeDriver
-- **Storage:** JSON
-
-## Project Structure
-
-```text
-.
-├── bot.py              # Main automation script
-├── messages.json       # Stored message logs
-├── whatsapp_session/   # Local browser session data
-└── .gitignore
-```
-
-## My Role
-
-- Built the Python/Selenium automation script
-- Implemented session persistence for WhatsApp Web
-- Designed message monitoring and logging workflow
-- Stored message data in structured JSON format
+- Python
+- Selenium
+- webdriver-manager
+- JSON
 
 ## Getting Started
 
-1. Install Python dependencies:
-
 ```bash
-pip install selenium
-```
-
-2. Make sure Chrome and ChromeDriver are installed and compatible.
-
-3. Run the bot:
-
-```bash
+pip install -r requirements.txt
 python bot.py
 ```
 
-4. Scan the QR code on first login.
+Chrome must be installed. On the first run, scan the WhatsApp Web QR code. Session files and captured messages remain local and are excluded by `.gitignore`.
 
-## Skills Demonstrated
+## My Role
 
-- Python scripting
-- Selenium browser automation
-- Session persistence
-- JSON logging
-- Automation workflow design
+I built the browser-automation flow, session reuse, DOM monitoring, message parsing, and local JSON persistence as an automation exercise.
 
-## What I Learned
+## Project Status and Limitations
 
-- Browser automation with Selenium
-- Persisting login sessions across runs
-- Extracting and storing structured data from web interactions
-- Designing controlled automation prototypes
+This is a learning/automation prototype, not a production bot. It does not send replies or provide a supported WhatsApp Business integration. WhatsApp Web DOM changes can break selectors, and collected message data must be handled in accordance with user consent and applicable privacy rules.
 
-## Important Note
+## License
 
-This project is intended for learning and controlled automation experiments. It should be used responsibly and in compliance with WhatsApp's terms and applicable privacy rules.
-
-## Author
-
-**Zeyad Alameri**  
-
-GitHub: [@zeyadalameri](https://github.com/zeyadalameri)
+No open-source license has been declared.
